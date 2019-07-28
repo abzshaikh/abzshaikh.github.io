@@ -233,6 +233,7 @@ body {
   left: 0px;
   width: 100%;
   overflow: auto;
+  z-index: 2;
 }
 
 .search-box-main-container {
