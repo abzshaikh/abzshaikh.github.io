@@ -41,6 +41,9 @@
     height: 300px;
     background: #172529;
   }
+  .movie-name {
+    font-size: 5rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
