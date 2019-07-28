@@ -30,8 +30,8 @@ $(document).ready(function(){
           
           $.ajax(videoSettings).done(function (response) {
               for(i=0;i<response.results.length;i++){
-                  if( response.results.type == "Trailer"){
-                      trailer = response.results.key;
+                  if( response.results[i].type == "Trailer"){
+                      trailer = response[i].results.key;
                       console.log(trailer);
                   }
               }
