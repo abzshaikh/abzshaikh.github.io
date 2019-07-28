@@ -1,6 +1,5 @@
 $(document).ready(function(){
     var listvalues = localStorage.getItem('movieDetails');
-    //pase the value 
     var finalvalue = JSON.parse(listvalues);
     console.log(finalvalue);
     console.log("http://image.tmdb.org/t/p/original/"+finalvalue.poster_path);
