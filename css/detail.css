@@ -76,5 +76,14 @@
   .main-detail-banner {
     height: 590px;
   }
+  .back-drop .container {
+    padding-top: 7rem;
+  }
+  .back-drop .row {
+    margin-bottom: 5px;
+  }
+  .back-drop:nth-of-type(5) {
+    margin-top: 3rem;
+  }
 }
 /*# sourceMappingURL=detail.css.map */
