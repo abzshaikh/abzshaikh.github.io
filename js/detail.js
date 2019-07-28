@@ -19,23 +19,25 @@ $(document).ready(function(){
 
     
       $(".trailer").click(function(){
-        var videoSettings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://api.themoviedb.org/3/movie/"+finalvalue.id+"/videos?language=en-US&api_key=6246cdb5166ba3a477f67ff322ad202a",
-            "method": "GET",
-            "headers": {},
-            "data": "{}"
-          }
-          
-          $.ajax(videoSettings).done(function (response) {
-              for(i=0;i<response.results.length;i++){
-                  if( response.results[i].type == "Trailer"){
-                    trailer = response.results[i].key;
-                    break; 
-                  }
-              }
-            $("#youtubeContent").attr("src","https://www.youtube.com/embed/"+trailer+"?autoplay=1&mute=1");
-          });
+          getVideos(finalvalue.id);
       });
 });
+function getVideos(key){
+    var videoSettings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.themoviedb.org/3/movie/"+key+"/videos?language=en-US&api_key=6246cdb5166ba3a477f67ff322ad202a",
+        "method": "GET",
+        "headers": {},
+        "data": "{}"
+      }
+      $.ajax(videoSettings).done(function (response) {
+          for(i=0;i<response.results.length;i++){
+              if( response.results[i].type == "Trailer"){
+                trailer = response.results[i].key;
+                break; 
+              }
+          }
+        $("#youtubeContent").attr("src","https://www.youtube.com/embed/"+trailer+"?autoplay=1&mute=1");
+      });     
+}
