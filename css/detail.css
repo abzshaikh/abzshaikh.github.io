@@ -28,7 +28,7 @@
 }
 
 @media screen and (min-width: 576px) {
-  .main-banner {
+  .main-detail-banner {
     height: 315px;
   }
   .overview-container {
@@ -42,19 +42,19 @@
 }
 
 @media screen and (min-width: 768px) {
-  .main-banner {
+  .main-detail-banner {
     height: 400px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .main-banner {
+  .main-detail-banner {
     height: 485px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .main-banner {
+  .main-detail-banner {
     height: 590px;
   }
 }
