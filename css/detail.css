@@ -88,7 +88,7 @@
   .back-drop .row {
     margin-bottom: 5px;
   }
-  .back-drop:nth-of-type(5) {
+  .back-drop .row:nth-of-type(5) {
     margin-top: 3rem;
   }
 }
