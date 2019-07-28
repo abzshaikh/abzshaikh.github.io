@@ -11,7 +11,7 @@ $(document).ready(function(){
     for(i=0;i<finalvalue.genres.length;i++){
         var htmlgenre = finalvalue.genres[i].name+", ";
         console.log(finalvalue.genres[i].name);
-        $(".movie-genre").append("Genre: "+htmlgenre);
+        $(".movie-genre").append(htmlgenre);
     }
     $(".movie-date").html("Release date: "+finalvalue.release_date);
 });
