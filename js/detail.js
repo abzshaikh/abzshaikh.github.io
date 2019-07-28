@@ -16,7 +16,8 @@ $(document).ready(function(){
         getVideos("#youtubeContent",finalvalue.id);
     });
     $(".close").on("click",function(){
-        alert("clicked");
+        $("#youtubeContent").stopVideo();
+
     });
         
 
