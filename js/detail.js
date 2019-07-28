@@ -15,4 +15,21 @@ $(document).ready(function(){
     $(".movie-date").html("Release date: "+finalvalue.release_date);
     $(".runtime").html("Movie runtime: "+finalvalue.runtime+" mins");
     $(".rating").html(finalvalue.vote_average);
+    // $("#youtubeContent").attr("src","https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1");
+
+    var videoSettings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.themoviedb.org/3/movie/"+finalvalue.id+"/videos?language=en-US&api_key=6246cdb5166ba3a477f67ff322ad202a",
+        "method": "GET",
+        "headers": {},
+        "data": "{}"
+      }
+      
+      $.ajax(videoSettings).done(function (response) {
+        console.log(response);
+      });
+      $(".trailer").click(function(){
+          alert("clicked");
+      });
 });
