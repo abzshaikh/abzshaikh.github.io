@@ -29,6 +29,11 @@
 .left{
     padding-left: 0px;
 }
+.rating{
+    background: red;
+    padding: 10px;
+    border-radius: 50%;
+}
 @media screen and (min-width: 576px) {
     .main-detail-banner{
         height:315px;
