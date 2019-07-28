@@ -74,6 +74,10 @@ body {
   padding-bottom: 1px;
 }
 
+#overview-img {
+  width: 100%;
+}
+
 @media screen and (min-width: 576px) {
   .main-detail-banner {
     height: 315px;
