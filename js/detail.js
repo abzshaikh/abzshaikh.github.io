@@ -9,7 +9,7 @@ $(document).ready(function(){
     $("#overview-img").attr("src","http://image.tmdb.org/t/p/w185/"+finalvalue.poster_path);
     $(".movie-name").html(finalvalue.original_title);
     for(i=0;i<finalvalue.genres.length;i++){
-        var htmlgenre = finalvalue.genres[i].name+", ";
+        var htmlgenre = finalvalue.genres[i].name;
         console.log(finalvalue.genres[i].name);
         $(".movie-genre").append(htmlgenre);
     }
