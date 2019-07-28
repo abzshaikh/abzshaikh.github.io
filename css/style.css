@@ -337,6 +337,10 @@ body {
   cursor: pointer;
 }
 
+.title-header {
+  font-size: 1.5rem;
+}
+
 /**********  Animation ****************/
 .fade-in-bottom {
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
