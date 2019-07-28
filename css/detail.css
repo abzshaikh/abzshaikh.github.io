@@ -33,6 +33,10 @@
   margin-bottom: 0px;
 }
 
+.left {
+  padding-left: 0px;
+}
+
 @media screen and (min-width: 576px) {
   .main-detail-banner {
     height: 315px;
