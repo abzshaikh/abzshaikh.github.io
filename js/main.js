@@ -118,23 +118,20 @@ $(document).ready(function(){
       $("body").on("click",".showDetails",function(){
         clickedon = $(this).attr("data-id");
         console.log(clickedon);
-        var detailSetting = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://api.themoviedb.org/3/movie/"+clickedon+"?language=en-US&api_key=6246cdb5166ba3a477f67ff322ad202a",
-            "method": "GET",
-            "headers": {},
-            "data": "{}"
-          }
-          
-          $.ajax(detailSetting).done(function (response) {
-            console.log(response);
-            // var listvalues = { "1": "value1", "2": "value2", "3": "value3" };
-            localStorage.setItem('movieDetails', JSON.stringify(response));
-            document.location.href = "detail.html";
-            // window.open("detail.html", '_blank');
-          });
-          
-        
+        getDetails(clickedon);
       });
 });
+function getDetails(movieid){
+  var detailSetting = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://api.themoviedb.org/3/movie/"+movieid+"?language=en-US&api_key=6246cdb5166ba3a477f67ff322ad202a",
+    "method": "GET",
+    "headers": {},
+    "data": "{}"
+  }
+  $.ajax(detailSetting).done(function (response) {
+    localStorage.setItem('movieDetails', JSON.stringify(response));
+    document.location.href = "detail.html";
+  });
+}
