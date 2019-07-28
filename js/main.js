@@ -60,7 +60,6 @@ $(document).ready(function(){
       }
       
       $.ajax(popularSetting).done(function (response) {
-        console.log(response);
         for(i=0;i<14;i++){
             var html = `<div>
                             <img class="showDetails" data-id="`+response.results[i].id+`" src="http://image.tmdb.org/t/p/w185/`+response.results[i].poster_path+`" alt=""/>
@@ -117,7 +116,6 @@ $(document).ready(function(){
       },2000);
       $("body").on("click",".showDetails",function(){
         clickedon = $(this).attr("data-id");
-        console.log(clickedon);
         getDetails(clickedon);
       });
 });
