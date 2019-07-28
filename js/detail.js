@@ -29,7 +29,14 @@ $(document).ready(function(){
           }
           
           $.ajax(videoSettings).done(function (response) {
-            console.log(response);
+              for(i=0;i<response.results.length;i++){
+                  if( response.results.type == "Trailer"){
+                      var trailer = response.results.key;
+                      break;
+                  }
+              }
+            console.log(response.results);
+            console.log(trailer);
           });
       });
 });
