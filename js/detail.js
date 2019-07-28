@@ -15,14 +15,11 @@ $(document).ready(function(){
     $(".movie-date").html("Release date: "+finalvalue.release_date);
     $(".runtime").html("Movie runtime: "+finalvalue.runtime+" mins");
     $(".rating").html(finalvalue.vote_average);
-    
-
-    
       $(".trailer").click(function(){
-          getVideos(finalvalue.id);
+          getVideos("#youtubeContent",finalvalue.id);
       });
 });
-function getVideos(key){
+function getVideos(selector,key){
     var videoSettings = {
         "async": true,
         "crossDomain": true,
@@ -38,6 +35,6 @@ function getVideos(key){
                 break; 
               }
           }
-        $("#youtubeContent").attr("src","https://www.youtube.com/embed/"+trailer+"?autoplay=1&mute=1");
+        $(selector).attr("src","https://www.youtube.com/embed/"+trailer+"?autoplay=1&mute=1");
       });     
 }
