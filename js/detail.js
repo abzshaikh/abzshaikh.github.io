@@ -31,7 +31,7 @@ $(document).ready(function(){
           $.ajax(videoSettings).done(function (response) {
               for(i=0;i<response.results.length;i++){
                   if( response.results[i].type == "Trailer"){
-                      trailer = response[i].results.key;
+                      trailer = response.results[i].key;
                       console.log(trailer);
                   }
               }
