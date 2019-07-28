@@ -29,7 +29,12 @@
   color: white;
 }
 
+.movie-name {
+  font-family: "poiret one";
+}
+
 .movie-genre, .movie-date {
+  font-family: dosis;
   margin-bottom: 0px;
 }
 
