@@ -43,6 +43,10 @@
   border-radius: 50%;
 }
 
+.modal-title {
+  color: #172529;
+}
+
 @media screen and (min-width: 576px) {
   .main-detail-banner {
     height: 315px;
