@@ -12,7 +12,7 @@ $(document).ready(function(){
     }
     $(".movie-date").html("Release date: "+finalvalue.release_date);
     $(".runtime").html("Movie runtime: "+finalvalue.runtime+" mins");
-    $(".rating").html(finalvalue.vote_average);
+    getRatingColor(".rating",finalvalue.vote_average);
     $(".trailer").click(function(){
         getVideos("#youtubeContent",finalvalue.id);
     });
@@ -35,4 +35,29 @@ function getVideos(selector,key){
             }
         $(selector).attr("src","https://www.youtube.com/embed/"+trailer+"?autoplay=1&mute=1");
         });     
+}
+function getRatingColor(selector,rating){
+    $(selector).html(rating);
+    switch(rating){
+        case "1":
+        case "2":
+            $(selector).css("background","#ff4545");
+            break;
+        case "3":
+        case "4":
+            $(selector).css("background","#ffa534");
+            break;
+        case "5":
+        case "6":
+            $(selector).css("background","#ffe234");
+            break;
+        case "7":
+        case "8":
+            $(selector).css("background","#b7dd29");
+            break;
+        case "9":
+        case "10":
+            $(selector).css("background","#57e32c");
+            break;
+    }
 }
