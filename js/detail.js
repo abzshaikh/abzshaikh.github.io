@@ -7,7 +7,6 @@ $(document).ready(function(){
     $(".movie-name").html(finalvalue.original_title);
     for(i=0;i<finalvalue.genres.length;i++){
         var htmlgenre = finalvalue.genres[i].name+", ";
-        console.log(finalvalue.genres[i].name);
         $(".movie-genre").append(htmlgenre);
     }
     $(".movie-date").html("Release date: "+finalvalue.release_date);
@@ -15,6 +14,9 @@ $(document).ready(function(){
     getRatingColor(".rating",finalvalue.vote_average);
     $(".trailer").click(function(){
         getVideos("#youtubeContent",finalvalue.id);
+    });
+    $(".close").click(function(){
+        alert("clicked");
     });
 });
 function getVideos(selector,key){
@@ -48,26 +50,4 @@ function getRatingColor(selector,rating){
         $(selector).css("background","#b7dd29");
     if(rating>8 && rating<=10)
         $(selector).css("background","#57e32c");
-    // switch(rating){
-    //     case "1":
-    //     case "2":
-    //         $(selector).css("background","#ff4545");
-    //         break;
-    //     case "3":
-    //     case "4":
-    //         $(selector).css("background","#ffa534");
-    //         break;
-    //     case "5":
-    //     case "6":
-    //         $(selector).css("background","#ffe234");
-    //         break;
-    //     case "7":
-    //     case "8":
-    //         $(selector).css("background","#b7dd29");
-    //         break;
-    //     case "9":
-    //     case "10":
-    //         $(selector).css("background","#57e32c");
-    //         break;
-    // }
 }
