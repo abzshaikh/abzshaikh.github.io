@@ -393,7 +393,9 @@ body {
     height: 550px;
     padding-top: 65px;
   }
-  
+  .title-header{
+    font-size: 3rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .banner-container{
@@ -405,4 +407,5 @@ body {
   .movie-list-title{
     width: 480px;
   }
+
 }
