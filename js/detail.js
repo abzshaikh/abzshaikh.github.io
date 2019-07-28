@@ -32,11 +32,11 @@ $(document).ready(function(){
               for(i=0;i<response.results.length;i++){
                   if( response.results.type == "Trailer"){
                       trailer = response.results.key;
-                      break;
+                      console.log(trailer);
                   }
               }
             console.log(response.results);
-            console.log(trailer);
+            
           });
       });
 });
