@@ -5,7 +5,7 @@ $(document).ready(function(){
     console.log(finalvalue);
     console.log("http://image.tmdb.org/t/p/original/"+finalvalue.poster_path);
     // $(".main-detail-banner").css({"background":"linear-gradient(to right,#000000,#929292),url(http://image.tmdb.org/t/p/w185/"+finalvalue.backdrop_path,"background-repeat":"no-repeat","background-size":"cover","background-blend-mode":"hard-light"});
-    $(".back-drop").css("background","url(images/banner.jpg)");
+    $(".back-drop").css("background","url(images/noimage.jpg)");
     $(".main-detail-banner").css({"background":"url(http://image.tmdb.org/t/p/w185/"+finalvalue.backdrop_path});
     $(".overview-content").html(finalvalue.overview);
     $("#overview-img").attr("src","http://image.tmdb.org/t/p/w185/"+finalvalue.poster_path);
