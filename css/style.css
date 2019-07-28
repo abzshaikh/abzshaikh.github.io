@@ -70,7 +70,7 @@ body {
   -webkit-transition: opacity .35s, visibility .35s, height .35s;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
-  z-index: 2;
+  z-index: 5;
 }
 
 .nav__overlay.open {
