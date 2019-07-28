@@ -38,26 +38,36 @@ function getVideos(selector,key){
 }
 function getRatingColor(selector,rating){
     $(selector).html(rating);
-    switch(rating){
-        case "1":
-        case "2":
-            $(selector).css("background","#ff4545");
-            break;
-        case "3":
-        case "4":
-            $(selector).css("background","#ffa534");
-            break;
-        case "5":
-        case "6":
-            $(selector).css("background","#ffe234");
-            break;
-        case "7":
-        case "8":
-            $(selector).css("background","#b7dd29");
-            break;
-        case "9":
-        case "10":
-            $(selector).css("background","#57e32c");
-            break;
-    }
+    if(rating<=2)
+        $(selector).css("background","#ff4545");
+    if(rating>2 && rating<=4)
+        $(selector).css("background","#ffa534");
+    if(rating>4 && rating<=6)
+        $(selector).css("background","#ffe234");
+    if(rating>6 && rating<=8)
+        $(selector).css("background","#b7dd29");
+    if(rating>8 && rating<=10)
+        $(selector).css("background","#57e32c");
+    // switch(rating){
+    //     case "1":
+    //     case "2":
+    //         $(selector).css("background","#ff4545");
+    //         break;
+    //     case "3":
+    //     case "4":
+    //         $(selector).css("background","#ffa534");
+    //         break;
+    //     case "5":
+    //     case "6":
+    //         $(selector).css("background","#ffe234");
+    //         break;
+    //     case "7":
+    //     case "8":
+    //         $(selector).css("background","#b7dd29");
+    //         break;
+    //     case "9":
+    //     case "10":
+    //         $(selector).css("background","#57e32c");
+    //         break;
+    // }
 }
