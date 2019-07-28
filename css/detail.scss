@@ -65,4 +65,16 @@
     .main-detail-banner{
         height:590px;
     }
+    .back-drop{
+        .container{
+            padding-top: 7rem;
+        }
+        .row{
+            margin-bottom: 5px;
+        }
+        &:nth-of-type(5){
+            margin-top: 3rem;
+        }
+    }
+
 }
