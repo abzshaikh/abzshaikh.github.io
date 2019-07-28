@@ -33,8 +33,8 @@ $(document).ready(function(){
                             <img src="`+backdropPath+`">
                         </div>
                         <div class="movie-list-title-container">
-                            <p class="movie-list-title"><span>Movie Title:</span>`+response.results[i].original_title+`</p>
-                            <p class="movie-list-releasedate"><span>Release Date:</span>`+response.results[i].release_date+`</p>
+                            <p class="movie-list-title"><span>Movie Title: </span>`+response.results[i].original_title+`</p>
+                            <p class="movie-list-releasedate"><span>Release Date: </span>`+response.results[i].release_date+`</p>
                         </div>
                     </div>`;
                     $(".search-box-list").append(html);
