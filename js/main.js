@@ -114,7 +114,7 @@ $(document).ready(function(){
               }
             ]
           });
-      },1500);
+      },2000);
       $("body").on("click",".showDetails",function(){
         clickedon = $(this).attr("data-id");
         console.log(clickedon);
