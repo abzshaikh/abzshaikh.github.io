@@ -23,22 +23,22 @@ body {
 .nav__button.active .top {
   -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
           transform: translateY(11px) translateX(0) rotate(45deg);
-  background: white;
+  background: #006fba;
 }
 
 .nav__button.active .middle {
   opacity: 0;
-  background: white;
+  background: #006fba;
 }
 
 .nav__button.active .bottom {
   -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
           transform: translateY(-11px) translateX(0) rotate(-45deg);
-  background: white;
+  background: #006fba;
 }
 
 .nav__button span {
-  background: white;
+  background: #006fba;
   border: none;
   height: 5px;
   width: 100%;
@@ -291,6 +291,11 @@ body {
 .footer-container {
   height: 150px;
   background: #172529;
+}
+
+.popular-movie-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .slick-dots {
