@@ -59,5 +59,8 @@
   .main-detail-banner {
     height: 590px;
   }
+  .movie-name {
+    font-size: 5rem;
+  }
 }
 /*# sourceMappingURL=detail.css.map */
