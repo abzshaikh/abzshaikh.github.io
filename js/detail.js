@@ -16,7 +16,7 @@ $(document).ready(function(){
         getVideos("#youtubeContent",finalvalue.id);
     });
     $(".close").on("click",function(){
-        $("#youtubeContent").stopVideo();
+        $("#youtubeContent").attr("src","");
 
     });
         
