@@ -16,6 +16,10 @@
   background: #172529;
 }
 
+.back-drop {
+  width: 100%;
+}
+
 .back-drop .container {
   color: white;
 }
