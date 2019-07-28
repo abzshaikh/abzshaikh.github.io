@@ -10,7 +10,7 @@ $(document).ready(function(){
     $(".movie-name").html(finalvalue.original_title);
     var htmlgenre = "Genre: ";
     for(i=0;i<finalvalue.genres.length;i++){
-        htmlgenre = finalvalue.genres[i].name+", ";
+        htmlgenre += finalvalue.genres[i].name+", ";
         console.log(finalvalue.genres[i].name);
         $(".movie-genre").append(htmlgenre);
     }
