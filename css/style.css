@@ -23,22 +23,22 @@ body {
 .nav__button.active .top {
   -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
           transform: translateY(11px) translateX(0) rotate(45deg);
-  background: #006fba;
+  background: white;
 }
 
 .nav__button.active .middle {
   opacity: 0;
-  background: #006fba;
+  background: white;
 }
 
 .nav__button.active .bottom {
   -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
           transform: translateY(-11px) translateX(0) rotate(-45deg);
-  background: #006fba;
+  background: white;
 }
 
 .nav__button span {
-  background: #006fba;
+  background: white;
   border: none;
   height: 5px;
   width: 100%;
