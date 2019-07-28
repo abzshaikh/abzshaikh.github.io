@@ -8,14 +8,14 @@ $(document).ready(function(){
     $("#overview-img").attr("src","http://image.tmdb.org/t/p/w185/"+finalvalue.poster_path);
     $(".movie-name").html(finalvalue.original_title);
     for(i=0;i<finalvalue.genres.length;i++){
-        var htmlgenre = finalvalue.genres[i].name;
+        var htmlgenre = finalvalue.genres[i].name+", ";
         console.log(finalvalue.genres[i].name);
         $(".movie-genre").append(htmlgenre);
     }
     $(".movie-date").html("Release date: "+finalvalue.release_date);
     $(".runtime").html("Movie runtime: "+finalvalue.runtime+" mins");
     $(".rating").html(finalvalue.vote_average);
-    // $("#youtubeContent").attr("src","https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1");
+    
 
     
       $(".trailer").click(function(){
@@ -35,9 +35,7 @@ $(document).ready(function(){
                     break; 
                   }
               }
-                console.log(trailer);
-                console.log(response.results);
-            
+            $("#youtubeContent").attr("src","https://www.youtube.com/embed/"+trailer+"?autoplay=1&mute=1");
           });
       });
 });
