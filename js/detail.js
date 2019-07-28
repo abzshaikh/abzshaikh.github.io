@@ -14,4 +14,6 @@ $(document).ready(function(){
         $(".movie-genre").append(htmlgenre);
     }
     $(".movie-date").html("Release date: "+finalvalue.release_date);
+    $(".runtime").html(finalvalue.runtime+" mins");
+    $(".rating").html(finalvalue.vote_average);
 });
