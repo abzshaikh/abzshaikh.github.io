@@ -1,8 +1,6 @@
 $(document).ready(function(){
     var listvalues = localStorage.getItem('movieDetails');
     var finalvalue = JSON.parse(listvalues);
-    console.log(finalvalue);
-    console.log("http://image.tmdb.org/t/p/original/"+finalvalue.poster_path);
     $(".main-detail-banner").css({"background":"url(http://image.tmdb.org/t/p/original/"+finalvalue.backdrop_path,"background-repeat":"no-repeat","background-size":"cover"});
     $(".overview-content").html(finalvalue.overview);
     $("#overview-img").attr("src","http://image.tmdb.org/t/p/w185/"+finalvalue.poster_path);
@@ -15,9 +13,9 @@ $(document).ready(function(){
     $(".movie-date").html("Release date: "+finalvalue.release_date);
     $(".runtime").html("Movie runtime: "+finalvalue.runtime+" mins");
     $(".rating").html(finalvalue.vote_average);
-      $(".trailer").click(function(){
-          getVideos("#youtubeContent",finalvalue.id);
-      });
+    $(".trailer").click(function(){
+        getVideos("#youtubeContent",finalvalue.id);
+    });
 });
 function getVideos(selector,key){
     var videoSettings = {
@@ -27,14 +25,14 @@ function getVideos(selector,key){
         "method": "GET",
         "headers": {},
         "data": "{}"
-      }
-      $.ajax(videoSettings).done(function (response) {
-          for(i=0;i<response.results.length;i++){
-              if( response.results[i].type == "Trailer"){
+        }
+        $.ajax(videoSettings).done(function (response) {
+            for(i=0;i<response.results.length;i++){
+                if( response.results[i].type == "Trailer"){
                 trailer = response.results[i].key;
                 break; 
-              }
-          }
+                }
+            }
         $(selector).attr("src","https://www.youtube.com/embed/"+trailer+"?autoplay=1&mute=1");
-      });     
+        });     
 }
