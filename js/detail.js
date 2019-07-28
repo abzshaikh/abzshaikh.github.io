@@ -15,9 +15,11 @@ $(document).ready(function(){
     $(".trailer").click(function(){
         getVideos("#youtubeContent",finalvalue.id);
     });
-    $(".close").click(function(){
+    $(".close").on("click",function(){
         alert("clicked");
     });
+        
+
 });
 function getVideos(selector,key){
     var videoSettings = {
