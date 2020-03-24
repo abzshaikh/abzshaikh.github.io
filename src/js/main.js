@@ -2,15 +2,15 @@ $(document).ready(function(){
 
     /* The variables store the position of the respective div selected using the class
        It is used for showing the div with animation when the scroll reaches that particular div*/
-    var offsetTop = $(".img-row-one").offset().top-300;
-    var offsetTop1 = $(".img-row-two").offset().top-300;
-    var offsetTop2 = $(".concept-row-one").offset().top-300;
-    var offsetTop3 = $(".concept-row-two").offset().top-300;
-    var offsetTop4 = $(".concept-row-three").offset().top-300;
-    var offsetTop5 = $(".online-store-one").offset().top-300;
-    var offsetTop6 = $(".online-store-two").offset().top-300;
-    var offsetTop7 = $(".news-container-row").offset().top-300;
-    var offsetTop8 = $(".footer-row").offset().top-300;
+    var offsetTop = $(".img-row-one").offset().top-500;
+    var offsetTop1 = $(".img-row-two").offset().top-500;
+    var offsetTop2 = $(".concept-row-one").offset().top-500;
+    var offsetTop3 = $(".concept-row-two").offset().top-500;
+    var offsetTop4 = $(".concept-row-three").offset().top-500;
+    var offsetTop5 = $(".online-store-one").offset().top-500;
+    var offsetTop6 = $(".online-store-two").offset().top-500;
+    var offsetTop7 = $(".news-container-row").offset().top-500;
+    var offsetTop8 = $(".footer-row").offset().top-700;
 
 
     /* The variables store the particular element selected using the class,
