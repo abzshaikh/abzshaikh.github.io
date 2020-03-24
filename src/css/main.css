@@ -848,6 +848,12 @@ body {
   .dash-reduce-container{
     margin-top: 15px !important;
   }
+  .img-block-container{
+    margin-top: 40px !important;
+  }
+  .news-container-row{
+    margin-bottom: 90px !important;
+  }
 }
 
 @media only screen and (max-width: 640px){
