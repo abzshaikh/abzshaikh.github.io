@@ -5,258 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rivoli | LUXURY LIFESTYLE RETAIL.</title>
-    <link rel="icon" href="images/favicon.ico" />
+    <link rel="icon" href="src/images/favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    
-    <link type="text/css" rel="stylesheet" href="css/main.css"/>
-    <link type="text/css" rel="stylesheet" href="css/mainmenu.css"/>
-    <link type="text/css" rel="stylesheet" href="css/hamburger.css"/>
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
-    <script>
-        $(document).ready(function(){
-            // var myIndex = 0;
-            // carousel();
-
-            // function carousel() {
-            // var i;
-            // var x = document.getElementsByClassName("mySlides");
-            // for (i = 0; i < x.length; i++) {
-            //     x[i].style.display = "none";  
-            // }
-            // myIndex++;
-            // if (myIndex > x.length) {myIndex = 1}    
-            // x[myIndex-1].style.display = "block";  
-            // setTimeout(carousel, 5000);    
-            // }
-
-            var imgSlider = simpleslider.getSlider({
-                container: document.getElementById('myslider'),
-                prop: 'left',
-                init: 759,
-                show: 0,
-                end: -759,
-                unit: 'px',
-                delay: 5,
-                duration: 1
-            });
-
-            $('.count').each(function() {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 3000,
-                    easing: 'swing',
-                    step: function(now) {
-                        $(this).text(Math.ceil(now));
-                    }
-                });
-            });
-
-            $('.carousel').flickity({
-                // options
-                cellAlign: 'left',
-                contain: true,
-                freeScroll: false,
-                // disable previous & next buttons and dots
-                prevNextButtons: false,
-                pageDots: false,
-            });
-
-            var offsetTop = $(".img-row-one").offset().top-300;
-            var offsetTop1 = $(".img-row-two").offset().top-300;
-            var offsetTop2 = $(".concept-row-one").offset().top-300;
-            var offsetTop3 = $(".concept-row-two").offset().top-300;
-            var offsetTop4 = $(".concept-row-three").offset().top-300;
-            var offsetTop5 = $(".online-store-one").offset().top-300;
-            var offsetTop6 = $(".online-store-two").offset().top-300;
-            var offsetTop7 = $(".news-container-row").offset().top-300;
-            var offsetTop8 = $(".footer-row").offset().top-300;
-            $(window).scroll(function() {
-                var scrollTop = $(window).scrollTop();
-                if (scrollTop > offsetTop) {
-                    $(".img-row-one").css("opacity","1").fadeIn(200).addClass("scale-in-hor-left");
-                }
-                if (scrollTop > offsetTop1) {
-                    $(".img-row-two").css("opacity","1").fadeIn(200).addClass("scale-in-hor-left");
-                }
-                if (scrollTop > offsetTop2) {
-                    // $(".test").css({"width":"100%","opacity":"1"}).fadeIn(200).addClass("scale-in-hor-left");
-                    $(".concept-row-one").css("opacity","1").fadeIn(200).addClass("scale-in-hor-left");
-                }
-                if (scrollTop > offsetTop3) {
-                    $(".concept-row-two").css("opacity","1").fadeIn(200).addClass("scale-in-hor-right");
-                }
-                if (scrollTop > offsetTop4) {
-                    $(".concept-row-three").css("opacity","1").fadeIn(200).addClass("scale-in-hor-right");
-                }
-                if (scrollTop > offsetTop5) {
-                    $(".online-store-one").css("opacity","1").fadeIn(200).addClass("fade-in-bottom");
-                }
-                if (scrollTop > offsetTop6) {
-                    $(".online-store-two").css("opacity","1").fadeIn(200).addClass("fade-in-bottom");
-                }
-                if (scrollTop > offsetTop7) {
-                    $(".news-container-row").css("opacity","1").fadeIn(200).addClass("fade-in-bottom");
-                }
-                if (scrollTop > offsetTop8) {
-                    $(".footer-row").css("opacity","1").fadeIn(200).addClass("fade-in-bottom");
-                }
-            });
-           
-            $( ".dash-reduce-container" )
-                .mouseover(function() {
-                $(this ).find(".dash-line").addClass("scale-out-hor-right");
-                })
-                .mouseout(function() {
-                $(this ).find(".dash-line").removeClass("scale-out-hor-right").addClass("scale-in-hor-right");
-            });
-
-            $( ".img-shade-container, .img-text" )
-                .mouseover(function() {
-                $(this ).siblings(".dash-reduce-container").find(".dash-line").addClass("scale-out-hor-right");
-                })
-                .mouseout(function() {
-                $(this ).siblings(".dash-reduce-container").find(".dash-line").removeClass("scale-out-hor-right").addClass("scale-in-hor-right");
-            });
-
-            $( ".img-text" )
-                .mouseover(function() {
-                $(this).find("span:nth-child(1)").css("top","-43px");
-                $(this).find("span:nth-child(2)").css("top","60px");
-                $(this).find("span:nth-child(3)").css("top","-70px");
-                $(this).find("span:nth-child(4)").css("top","75px");
-                $(this).find("span:nth-child(5)").css("top","-60px");
-                $(this).find("span:nth-child(6)").css("top","50px");
-                $(this).find("span:nth-child(7)").css("top","-50px");
-                $(this).find("span:nth-child(8)").css("top","110px");
-                $(this).find("span:nth-child(9)").css("top","-50px");
-                $(this).find("span:nth-child(10)").css("top","33px");
-                })
-                .mouseout(function() {
-                $(this).find("span:nth-child(1)").css("top","0px");
-                $(this).find("span:nth-child(2)").css("top","0px");
-                $(this).find("span:nth-child(3)").css("top","0px");
-                $(this).find("span:nth-child(4)").css("top","0px");
-                $(this).find("span:nth-child(5)").css("top","0px");
-                $(this).find("span:nth-child(6)").css("top","0px");
-                $(this).find("span:nth-child(7)").css("top","0px");
-                $(this).find("span:nth-child(8)").css("top","0px");
-                $(this).find("span:nth-child(9)").css("top","0px");
-                $(this).find("span:nth-child(10)").css("top","0px");
-            });
-
-            $( ".img-shade-container")
-                .mouseover(function() {
-                $(this).siblings(".img-text").find("span:nth-child(1)").css("top","-43px");
-                $(this).siblings(".img-text").find("span:nth-child(2)").css("top","60px");
-                $(this).siblings(".img-text").find("span:nth-child(3)").css("top","-70px");
-                $(this).siblings(".img-text").find("span:nth-child(4)").css("top","75px");
-                $(this).siblings(".img-text").find("span:nth-child(5)").css("top","-60px");
-                $(this).siblings(".img-text").find("span:nth-child(6)").css("top","50px");
-                $(this).siblings(".img-text").find("span:nth-child(7)").css("top","-50px");
-                $(this).siblings(".img-text").find("span:nth-child(8)").css("top","110px");
-                $(this).siblings(".img-text").find("span:nth-child(9)").css("top","-50px");
-                $(this).siblings(".img-text").find("span:nth-child(10)").css("top","33px");
-                })
-                .mouseout(function() {
-                $(this).siblings(".img-text").find("span:nth-child(1)").css("top","0px");
-                $(this).siblings(".img-text").find("span:nth-child(2)").css("top","0px");
-                $(this).siblings(".img-text").find("span:nth-child(3)").css("top","0px");
-                $(this).siblings(".img-text").find("span:nth-child(4)").css("top","0px");
-                $(this).siblings(".img-text").find("span:nth-child(5)").css("top","0px");
-                $(this).siblings(".img-text").find("span:nth-child(6)").css("top","0px");
-                $(this).siblings(".img-text").find("span:nth-child(7)").css("top","0px");
-                $(this).siblings(".img-text").find("span:nth-child(8)").css("top","0px");
-                $(this).siblings(".img-text").find("span:nth-child(9)").css("top","0px");
-                $(this).siblings(".img-text").find("span:nth-child(10)").css("top","0px");
-            });
-
-            $( ".concept-block")
-                .mouseover(function() {
-                    $("body").css("background","#9e8c7f");
-                $(this).siblings("div").find("span:nth-child(1)").css("top","-53px");
-                $(this).siblings("div").find("span:nth-child(2)").css("top","60px");
-                $(this).siblings("div").find("span:nth-child(3)").css("top","-70px");
-                $(this).siblings("div").find("span:nth-child(4)").css("top","75px");
-                $(this).siblings("div").find("span:nth-child(5)").css("top","-60px");
-                $(this).siblings("div").find("span:nth-child(6)").css("top","50px");
-                $(this).siblings("div").find("span:nth-child(7)").css("top","-50px");
-                $(this).siblings("div").find("span:nth-child(8)").css("top","70px");
-                $(this).siblings("div").find("span:nth-child(9)").css("top","-30px");
-                $(this).siblings("div").find("span:nth-child(10)").css("top","20px");
-                })
-                .mouseout(function() {
-                $(this).siblings("div").find("span:nth-child(1)").css("top","0px");
-                $(this).siblings("div").find("span:nth-child(2)").css("top","0px");
-                $(this).siblings("div").find("span:nth-child(3)").css("top","0px");
-                $(this).siblings("div").find("span:nth-child(4)").css("top","0px");
-                $(this).siblings("div").find("span:nth-child(5)").css("top","0px");
-                $(this).siblings("div").find("span:nth-child(6)").css("top","0px");
-                $(this).siblings("div").find("span:nth-child(7)").css("top","0px");
-                $(this).siblings("div").find("span:nth-child(8)").css("top","0px");
-                $(this).siblings("div").find("span:nth-child(9)").css("top","0px");
-                $(this).siblings("div").find("span:nth-child(10)").css("top","0px");
-                $("body").css("background","#1A1A1C");
-            });
-
-            $( ".concept-brand")
-                .mouseover(function() {
-                    $("body").css("background","#9e8c7f");
-                $(this).find("span:nth-child(1)").css("top","-53px");
-                $(this).find("span:nth-child(2)").css("top","60px");
-                $(this).find("span:nth-child(3)").css("top","-70px");
-                $(this).find("span:nth-child(4)").css("top","75px");
-                $(this).find("span:nth-child(5)").css("top","-60px");
-                $(this).find("span:nth-child(6)").css("top","50px");
-                $(this).find("span:nth-child(7)").css("top","-50px");
-                $(this).find("span:nth-child(8)").css("top","70px");
-                $(this).find("span:nth-child(9)").css("top","-30px");
-                $(this).find("span:nth-child(10)").css("top","65px");
-                $(this).find("span:nth-child(11)").css("top","-40px");
-                $(this).find("span:nth-child(12)").css("top","61px");
-                $(this).find("span:nth-child(13)").css("top","-45px");
-                $(this).find("span:nth-child(14)").css("top","85px");
-                })
-                .mouseout(function() {
-                $(this).find("span:nth-child(1)").css("top","0px");
-                $(this).find("span:nth-child(2)").css("top","0px");
-                $(this).find("span:nth-child(3)").css("top","0px");
-                $(this).find("span:nth-child(4)").css("top","0px");
-                $(this).find("span:nth-child(5)").css("top","0px");
-                $(this).find("span:nth-child(6)").css("top","0px");
-                $(this).find("span:nth-child(7)").css("top","0px");
-                $(this).find("span:nth-child(8)").css("top","0px");
-                $(this).find("span:nth-child(9)").css("top","0px");
-                $(this).find("span:nth-child(10)").css("top","0px");
-                $(this).find("span:nth-child(11)").css("top","0px");
-                $(this).find("span:nth-child(12)").css("top","0px");
-                $(this).find("span:nth-child(13)").css("top","0px");
-                $(this).find("span:nth-child(14)").css("top","0px");
-                $("body").css("background","#1A1A1C");
-            });
-
-            $( ".online-store-img .shade" )
-                .mouseover(function() {
-                    console.log("in");
-                $(this ).css("background","rgba(0, 0, 0, 0.5)");
-                $(this ).siblings(".dash-reduce-container").find(".dash-line").addClass("scale-out-hor-right");
-                })
-                .mouseout(function() {
-                    console.log("out");
-                $(this ).css("background","rgba(0, 0, 0, 0.25)");
-                $(this ).siblings(".dash-reduce-container").find(".dash-line").removeClass("scale-out-hor-right").addClass("scale-in-hor-right");
-            });
-
-        });
-
-    </script>
+    <link rel="stylesheet" href="src/css/bannerSlideshow.css">
+    <link type="text/css" rel="stylesheet" href="src/css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="src/css/hamburger.css"/>
+    <link rel="stylesheet" href="src/css/scroll.css">
+    <link rel="stylesheet" href="src/css/counter.css">
+    <link rel="stylesheet" href="src/css/newsCarousel.css">
 </head>
 <body style="background:#1A1A1C">
     <nav>
@@ -264,7 +26,7 @@
             <div class="row">
                 <div class="col-2">
                     <div>
-                        <img id="logo" src="images/logo.svg" alt="Logo">
+                        <img id="logo" src="src/images/logo.svg" alt="Logo">
                     </div>
                 </div>
                 <div class="col-8" style="display: flex;justify-content: flex-end;align-items: center;">
@@ -359,47 +121,40 @@
         </div>
     </div>
 
-    <div class="row" style="height: 100vh;width: 100%;padding: 0 85px;">
+    <div class="row banner-container">
         <div class="col-4" style="padding: 0">
             <div class="banner-text-left-container">
                 <h1 class="banner-text-left">
-                    <span>luxury</span>
-                    <span>lifestyle</span>
-                    <span>retail</span>
+                    <span class="slide-in-bottom">luxury</span>
+                    <span class="slide-in-bottom-delay1">lifestyle</span>
+                    <span class="slide-in-bottom-delay2">retail</span>
                 </h1>
-                <div class="dash-reduce-container">
+                <div class="dash-reduce-container slide-in-bottom-delay3">
                     <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
                     <div class="not-line-text" style="padding-left: 90px;">More</div>
                 </div>
             </div>
         </div>
         <div class="col-6">
-            <div id="myslider">
-                <img src="images/watch.jpg"/>
-                <img src="images/glasses.jpg"/>
-                <img src="images/pen.png"/>
-                <img src="images/pendant.png"/>
-                <img src="images/bag.png">
+            <div id="myslider" class="slide-in-right">
+                <img src="src/images/watch.jpg"/>
+                <img src="src/images/glasses.jpg"/>
+                <img src="src/images/pen.png"/>
+                <img src="src/images/pendant.png"/>
+                <img src="src/images/bag.png">
               </div>
-            <!-- <div class="w3-content w3-section">
-                <img class="mySlides w3-animate-right" src="images/watch.jpg" alt="..." style="width:100%">
-                <img class="mySlides w3-animate-right" src="images/glasses.jpg" alt="..." style="width:100%">
-                <img class="mySlides w3-animate-right" src="images/pen.png" alt="..." style="width:100%">
-                <img class="mySlides w3-animate-right" src="images/pendant.png" alt="..." style="width:100%">
-                <img class="mySlides w3-animate-right" src="images/bag.png" alt="..." style="width:100%">
-            </div> -->
         </div>
         <div class="col-2" style="display: flex;justify-content: flex-end;">
             <div class="banner-text-right-container">
-                <div class="banner-text-right">
+                <div class="banner-text-right slide-in-bottom">
                     <span class="count">100</span><span>+</span>
                     <p class="banner-text-right-value">Brands</p>
                 </div>
-                <div class="banner-text-right">
+                <div class="banner-text-right slide-in-bottom-delay1">
                     <span class="count">30</span><span>+</span>
                     <p class="banner-text-right-value">Years since inception</p>
                 </div>
-                <div class="banner-text-right">
+                <div class="banner-text-right slide-in-bottom-delay2">
                     <span class="count">400</span><span>+</span>
                     <p class="banner-text-right-value">Stores</p>
                 </div>
@@ -409,7 +164,7 @@
         </div>
     </div>
     
-    <div class="row" style="margin-top: 140px;">
+    <div class="row img-block-container" style="margin-top: 140px;">
         <div class="col-6 imgblock img-row-one" style="display: flex;justify-content: center;">
             <div class="img-block-text">
                 <div class="img-text">
@@ -424,7 +179,7 @@
                     </h3>
                 </div>
                 <div class="img-shade-container">
-                    <img src="images/blockimg1.jpg" alt="" style="max-width: 287px;">
+                    <img src="src/images/blockimg1.jpg" alt="" style="max-width: 287px;">
                     <div class="shade"></div>
                 </div>
 
@@ -448,7 +203,7 @@
                     </h3>
                 </div>
                 <div class="img-shade-container">
-                    <img src="images/blockimg2.jpg" alt="" style="height: auto;max-width: 100%;height: 298px;">
+                    <img src="src/images/blockimg2.jpg" alt="" style="height: auto;max-width: 100%;height: 298px;">
                     <div class="shade"></div>
                 </div>
                 <div class="dash-reduce-container">
@@ -475,7 +230,7 @@
                     </h3>
                 </div>
                 <div class="img-shade-container" >
-                    <img src="images/blockimg3.jpg" alt="" style="height: auto;max-width: 100%;height: 294px;">
+                    <img id="accessories-img" src="src/images/blockimg3.jpg" alt="" style="height: auto;max-width: 100%;height: 294px;">
                     <div class="shade"></div>
                 </div>
                 <div class="dash-reduce-container">
@@ -498,7 +253,7 @@
                     </h3>
                 </div>
                 <div class="img-shade-container">
-                    <img src="images/blockimg4.jpg" alt="" style="height: auto;max-width: 345px;">
+                    <img src="src/images/blockimg4.jpg" alt="" style="height: auto;max-width: 345px;">
                     <div class="shade"></div>
                 </div>
                 <div class="dash-reduce-container">
@@ -510,9 +265,9 @@
     </div>
 
     <div class="row concept-block-row ">
-        <div style="display: flex;width: 100%;">
-            <div class="concept-block concept-row-one" style="background-image: url(./images/inside1.jpg);"></div>
-            <div style="width: 35%;position: relative;">
+        <div class="concept-mob-row" style="display: flex;width: 100%;">
+            <div class="concept-block concept-row-one" style="background-image: url(src/images/inside1.jpg);"></div>
+            <div class="concept-mob-detail" style="width: 35%;position: relative;">
                 <div class="concept-head-text-container">
                     <div class="concept-head">
                         <div class="concept-head-text">
@@ -537,14 +292,16 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
+        </div>
+        <div class="moving-text-container">
+            <h1 class="moving-text">R concepts</h1>
         </div>
     </div>
 
     <div class="row concept-block-row ">
-        <div style="display: flex;width: 100%;">
-            <div style="width: 35%;position: relative;">
+        <div class="concept-mob-row concept-mob-row2" style="display: flex;width: 100%;">
+            <div class="concept-mob-detail" style="width: 35%;position: relative;">
                 <div class="concept-head-text-container">
                     <div class="concept-head" style="left: auto;text-align: right;right: -40px;z-index: 2;">
                         <div class="concept-head-text">
@@ -576,15 +333,18 @@
                     </div>
                 </div>
             </div>
-            <div class="concept-block concept-row-two" style="background-image: url(./images/inside2.jpg)"></div>
+            <div class="concept-block concept-row-two" style="background-image: url(src/images/inside2.jpg)"></div>
+        </div>
+        <div class="moving-text-container-left" style="left: 3%;">
+            <h1 class="moving-text">R Concierge</h1>
         </div>
     </div>
 
     <div class="row concept-block-row concept-row-three">
-        <div style="display: flex;width: 100%;">
-            <div class="concept-block concept-brand" style="background-image: url(./images/inside3.jpg);width: 80%;position: relative;">
+        <div class="concept-mob-row" style="display: flex;width: 100%;">
+            <div class="concept-block concept-brand" style="background-image: url(src/images/inside3.jpg);width: 80%;position: relative;">
                 <div class="shade"></div>
-                <div class="concept-head-text" style="text-align: center;width: 100%;top: 35%;position: relative;">
+                <div class="concept-head-text" style="text-align: center;width: 100%;top: 40%;position: relative;">
                     <h2>
                         <span>b</span>
                         <span>r</span>
@@ -602,12 +362,19 @@
                         <span>s</span>
                     </h2>
                 </div>
+                <div class="dash-reduce-container" style="position: absolute;top: 50%;left: 40%;">
+                    <div class="line-text"><span class="dash-line"></span>Discover</div>
+                    <div class="not-line-text">Brand Boutiques</div>
+                </div>
             </div>
             <div style="width: 20%;"></div>
         </div>
+        <div class="moving-text-container">
+            <h1 class="moving-text">Brand Boutiques</h1>
+        </div>
     </div>
 
-    <div class="row" style="padding-top: 160px;padding-bottom: 200px;">
+    <div class="row store-row" style="padding-top: 160px;padding-bottom: 200px;">
         <div class="online-store-one" style="display: flex;width: 100%;position: relative;">
             <div class="store-header">
                 <h2>online stores</h2>
@@ -617,7 +384,7 @@
                     <div class="line-text"><span class="dash-line"></span>Visit</div>
                     <div class="not-line-text" style="padding-left: 90px;">Rivoli shop</div>
                 </div>
-                <img src="./images/store1.jpg" alt="" style="height: 100%;width: 100%;">
+                <img src="src/images/store1.jpg" alt="" style="height: 100%;width: 100%;">
                 <div class="shade"></div>
                 
             </div>
@@ -626,151 +393,253 @@
                     <div class="line-text"><span class="dash-line"></span>Visit</div>
                     <div class="not-line-text" style="padding-left: 90px;" >Rivoli Eyezone</div>
                 </div>
-                <img src="./images/store2.jpg" alt="" style="height: 100%;width: 110%;top: 55px;position: relative;left: -5%;">
+                <img src="src/images/store2.jpg" alt="" style="height: 100%;width: 110%;top: 55px;position: relative;left: -5%;">
                 <div class="shade" style="top: 55px;left: -10%;width: 110%;"></div>
                 
             </div>
         </div>
         <div class="online-store-two" style="display: flex;justify-content: center;width: 100%;top: 100px;position: relative;">
-            <img src="./images/store3.png" alt="" style="height: 100%;width: 60%;">
+            <div class="locator-container">
+                <h2>Store Locator</h2>
+            </div>
+            <img src="src/images/store3.png" alt="" style="height: 100%;width: 60%;">
         </div>
     </div>
 
     <div class="row news-container-row" style="margin-bottom: 190px;">
-        <div style="display: block;width: 100%;text-align: center;">
-            <h2 style="margin: 0px;font-size: 3.4285714286em;line-height: 1;margin-bottom: 0.7142857143em;letter-spacing: 25px;text-transform: uppercase;font-family: DomaineDisplayTestRegular;color: white;">
+        <div style="display: block;width: 100%;text-align: center;position: relative;">
+            <h2 class="news-header">
                 News &
                 <span style="display: block;margin-left: 65px;margin-top: 25px;">Events</span>
             </h2>
+            <i class="fa fa-long-arrow-left slider-arrow-left" aria-hidden="true" style="color:#5b5b5b"></i>
+            <i class="fa fa-long-arrow-right slider-arrow-right" aria-hidden="true"></i>
+            
         </div>
         <div class="carousel">
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news1.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news14.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">22 Mar 2020</p>
+                        <h6 class="news-headline">Rivoli Customer Care: Update</h6>
+                        <p class="news-excerpt">In support of safeguarding public health and ensuring we maintain hygienic...</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news2.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news1.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">06 Feb 2020</p>
+                        <h6 class="news-headline">Scuderia Ferrari Pop-Up Simulator at Hour Choice, Zabeel Extension - The Dubai Mall</h6>
+                        <p class="news-excerpt">Visit Hour Choice, Zabeel extension and enjoy a fun ride on our Scuderia Ferrari virtual simulator.…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news3.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news2.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">28 Jan 2020</p>
+                        <h6 class="news-headline">Montblanc boutique reopens at Mall of the Emirates</h6>
+                        <p class="news-excerpt">Discover the Montblanc collection at the latest retail design concept store.</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news4.jpeg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news3.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">07 Jan 2020</p>
+                        <h6 class="news-headline">Gucci Unveils Pop-Up Store For It's Timepieces at The Dubai Mall</h6>
+                        <p class="news-excerpt">Gucci is pleased to unveil a pop-up store in Dubai, United Arab Emirates at the Dubai Mall,…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news5.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news4.jpeg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">30 Dec 2019</p>
+                        <h6 class="news-headline">Rivoli Group launches Avanti, premium eyewear concept store.</h6>
+                        <p class="news-excerpt">The store is based on an unique design, uses an antique architectural background to create a…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news6.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news5.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">12 Dec 2019</p>
+                        <h6 class="news-headline">Rivoli Group announces the final winner of Omega Nations Golf Tour 2019</h6>
+                        <p class="news-excerpt">Rivoli Group hosted the final tournament of the OMEGA Nations Golf Tour 2019 on December 4th at the…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news7.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news6.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">11 Dec 2019</p>
+                        <h6 class="news-headline">It’s Happy Holidays & the time for gifting!</h6>
+                        <p class="news-excerpt">Rivoli brings exceptional gifting ideas from a wide range of international brands of watches,…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news8.png);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news7.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">22 Nov 2019</p>
+                        <h6 class="news-headline">Wear the colors of unity this UAE National Day</h6>
+                        <p class="news-excerpt">Rivoli pays tribute to the UAE on the occasion of its 48th National Day, by offering a curated…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news9.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news8.png);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">14 Nov 2019</p>
+                        <h6 class="news-headline">Rivoli Group announces winners of the 3rd qualifier tournament for Omega Nations Tour 2019</h6>
+                        <p class="news-excerpt">The third qualifier of the OMEGA Nations Golf Tour 2019 which was hosted by the Rivoli Group on…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news10.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news9.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">14 Nov 2019</p>
+                        <h6 class="news-headline">The first Rado Star Prize UAE and Dubai Design Week</h6>
+                        <p class="news-excerpt">At an exclusive event in the Design District Dubai on Tuesday 12 November, Rado and Dubai Design…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news11.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news10.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">14 Nov 2019</p>
+                        <h6 class="news-headline">OMEGA opens its 13th boutique in UAE at Jumeirah Beach Hotel</h6>
+                        <p class="news-excerpt">The world-renowned Swiss watchmaker OMEGA has continued to expand its presence in the UAE by opening…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news12.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news11.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">15 Oct 2019</p>
+                        <h6 class="news-headline">Rado launches new boutique with Hrithik Roshan at The Dubai Mall</h6>
+                        <p class="news-excerpt">Rado, the globally recognized Swiss watch brand, opened its new boutique at The Dubai Mall along…</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-cell">
                 <div class="news-container">
-                    <div class="news-image" style="background: url(./images/news13.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news12.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
                     <div class="news-text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p class="news-date">01 Sep 2019</p>
+                        <h6 class="news-headline">Rivoli EyeZone continues to grow, opens its 43rd store</h6>
+                        <p class="news-excerpt">Rivoli EyeZone reinforces its retail presence in the city of Al Ain, in the eastern region of the…</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="news-container">
+                    <div class="news-hover-shade">
+                        <div class="dash-reduce-container">
+                            <div class="line-text"><div style="width: 36px;margin-right: 12px;"><span class="dash-line"></span></div>Read</div>
+                            <div class="not-line-text" style="padding-left: 90px;">More</div>
+                        </div>
+                    </div>
+                    <div class="news-image" style="background: url(src/images/news13.jpg);background-size: cover;background-repeat: no-repeat;background-position:center"></div>
+                    <div class="news-text">
+                        <p class="news-date">24 Jul 2019</p>
+                        <h6 class="news-headline">Omega’s lunar legend powers the latest moonwatch</h6>
+                        <p class="news-excerpt">Introducing the Speedmaster Moonwatch 321 Platinum 
+
+                            On the 50th anniversary of the Apollo 11 lunar…</p>
                     </div>
                 </div>
             </div>
@@ -778,9 +647,9 @@
     </div>
 
     <div class="row footer-row" style="height: 985px;">
-        <div style="background-color: #202023;width: 80vw;padding: 190px 80px 0 80px;display: flex;">
+        <div class="footer-container" style="background-color: #202023;width: 80vw;padding: 190px 80px 0 80px;display: flex;">
             <div style="width: 25%;height: 100%;">
-                <img src="images/logo.svg" alt="" style="max-width: 58px;">
+                <img src="src/images/logo.svg" alt="" style="max-width: 58px;">
             </div>
             <div style="width: 75%;height: 100%;">
                 <div style="width: 100%;height: 58%;display: flex;color: white;">
@@ -833,10 +702,21 @@
         </div>
     </div>
 
-    <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/hamburger.js"></script>
-    <script type="text/javascript" src="js/header.js"></script>
+    <button class="btn btn-primary scroll-top" data-scroll="up" type="button">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/hamburger.js"></script>
+    <script src="src/js/header.js"></script>
+    <script src="src/js/bannerSlideshow.js"></script>
+    <script src="src/js/counter.js"></script>
+    <script src="src/js/newsCarousel.js"></script>
     <script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="src/js/scroll.js"></script>
 </body>
 </html>
