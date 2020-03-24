@@ -1,0 +1,22 @@
+#myslider { 
+    width:118.5%; 
+    height:138.2%; 
+}
+#myslider img{
+    width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    #myslider {
+        height: 70%;
+      }
+}
+
+@media only screen and (max-width: 767px){
+    #myslider{
+        top: 20%;
+      }
+      #myslider img{
+        width: 109%;
+      }
+}

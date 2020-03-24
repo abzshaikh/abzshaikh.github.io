@@ -1,0 +1,390 @@
+.sidenav{
+  width: 75%;
+  z-index: 10000;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+}
+nav .sidenav-trigger{
+  height: 23px;
+  display: inline-flex;
+  margin: 0;
+}
+
+.menu {
+  height: 23px;
+  width: 28px;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+}
+
+.bar {
+  height: 1px;
+  width: 28px;
+  display: block;
+  position: relative;
+  background-color: #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.mod{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 54px;
+  right: 81px;
+  z-index: 10001;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.model-1 .bar {
+  position: absolute;
+}
+.topbar{
+  top: 10px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transition: top 0.3s ease 0.1s, -moz-transform 0.3s ease-out 0.5s;
+  -o-transition: top 0.3s ease 0.1s, -o-transform 0.3s ease-out 0.5s;
+  -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
+  -webkit-transition-delay: 0.1s, 0.5s;
+  transition-delay: 0.1s, 0.5s;
+  transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
+}
+.middlebar{
+  opacity: 0;
+}
+.bottombar{
+  top: 10px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -moz-transition: top 0.3s ease 0.1s, -moz-transform 0.3s ease-out 0.5s;
+  -o-transition: top 0.3s ease 0.1s, -o-transform 0.3s ease-out 0.5s;
+  -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
+  -webkit-transition-delay: 0.1s, 0.5s;
+  transition-delay: 0.1s, 0.5s;
+  transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
+}
+.first{
+  top: 0px;
+}
+.second{
+  top: 10px;
+}
+.third{
+  top: 20px;
+}
+
+/*============= Demo  Animation  ================*/
+@-moz-keyframes mrotr {
+  0% {
+    -moz-transform: translateY(0px) rotate(0);
+    transform: translateY(0px) rotate(0);
+  }
+  50% {
+    -moz-transform: translateY(15px) rotate(0);
+    transform: translateY(15px) rotate(0);
+  }
+  100% {
+    -moz-transform: translateY(15px) rotate(45deg);
+    transform: translateY(15px) rotate(45deg);
+  }
+}
+@-webkit-keyframes mrotr {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0);
+    transform: translateY(0px) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(15px) rotate(0);
+    transform: translateY(15px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(15px) rotate(45deg);
+    transform: translateY(15px) rotate(45deg);
+  }
+}
+@keyframes mrotr {
+  0% {
+    -moz-transform: translateY(0px) rotate(0);
+    -ms-transform: translateY(0px) rotate(0);
+    -webkit-transform: translateY(0px) rotate(0);
+    transform: translateY(0px) rotate(0);
+  }
+  50% {
+    -moz-transform: translateY(15px) rotate(0);
+    -ms-transform: translateY(15px) rotate(0);
+    -webkit-transform: translateY(15px) rotate(0);
+    transform: translateY(15px) rotate(0);
+  }
+  100% {
+    -moz-transform: translateY(15px) rotate(45deg);
+    -ms-transform: translateY(15px) rotate(45deg);
+    -webkit-transform: translateY(15px) rotate(45deg);
+    transform: translateY(15px) rotate(45deg);
+  }
+}
+@-moz-keyframes mrotl {
+  0% {
+    -moz-transform: translateY(0px) rotate(0);
+    transform: translateY(0px) rotate(0);
+  }
+  50% {
+    -moz-transform: translateY(-15px) rotate(0);
+    transform: translateY(-15px) rotate(0);
+  }
+  100% {
+    -moz-transform: translateY(-15px) rotate(-45deg);
+    transform: translateY(-15px) rotate(-45deg);
+  }
+}
+@-webkit-keyframes mrotl {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0);
+    transform: translateY(0px) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(-15px) rotate(0);
+    transform: translateY(-15px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px) rotate(-45deg);
+    transform: translateY(-15px) rotate(-45deg);
+  }
+}
+@keyframes mrotl {
+  0% {
+    -moz-transform: translateY(0px) rotate(0);
+    -ms-transform: translateY(0px) rotate(0);
+    -webkit-transform: translateY(0px) rotate(0);
+    transform: translateY(0px) rotate(0);
+  }
+  50% {
+    -moz-transform: translateY(-15px) rotate(0);
+    -ms-transform: translateY(-15px) rotate(0);
+    -webkit-transform: translateY(-15px) rotate(0);
+    transform: translateY(-15px) rotate(0);
+  }
+  100% {
+    -moz-transform: translateY(-15px) rotate(-45deg);
+    -ms-transform: translateY(-15px) rotate(-45deg);
+    -webkit-transform: translateY(-15px) rotate(-45deg);
+    transform: translateY(-15px) rotate(-45deg);
+  }
+}
+@-moz-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.menu-text{
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: "FuturaPT-Medium";
+  letter-spacing: 3.25px;
+  cursor: pointer;
+  display: inline-flex;
+  width: 61px;
+  justify-content: inherit;
+  color: white;
+}
+
+#menu-overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #0000008c;
+  z-index: 10000;
+  display: none;
+  cursor: pointer;
+}
+
+#slide-curtain-container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#list-container-left{
+  width: 50%;
+  height: 100%;
+}
+
+#list-container-right{
+  width: 50%;
+  height: 100%;
+}
+
+#list-container-left ul, #list-container-right ul{
+  padding-left: 12px;
+}
+
+.list-container-title{
+  opacity: 0.5;
+  color: #1A1A1C;
+  font-size: 14px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  line-height: 19px;
+  margin-bottom: 0px;
+  font-family: FuturaPT-Book;
+}
+
+.list-left ul li{
+  font-size: 36px;
+  font-family: "DomaineDisplayTestMedium";
+  letter-spacing: 0.72px;
+  line-height: 70px;
+  color: #1A1A1C;
+  display: flex;
+  align-items: center;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+}
+
+.list-left, .list-right{
+  margin-bottom: 60px;
+}
+
+.list-right ul li {
+  font-size: 1.0714285714em;
+  font-family: "FuturaPT-Book";
+  letter-spacing: 0.3px;
+  line-height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.dash{
+  width:0px;
+  height:2px;
+  background: #AFB478;
+  display:inline-flex;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  }
+  .stretch{
+  width:30px;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+  
+  }
+
+  .list-content{
+    cursor: pointer;
+  }
+
+  .list-content div{
+  width:44px;
+  display:inline-flex;
+  }
+
+  .list-title-dash-container {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .list-title-dash{
+    width: 35px;
+    margin-right: 20px;
+    height: 1px;
+    background: #1A1A1C;
+    display: inline-flex;
+    opacity: 0.5;
+  }
+
+@media screen and (max-width: 1199px), screen and (max-height: 950px) {
+  .list-left ul li {
+    font-size: 28px;
+    line-height: 56px;
+  }
+}
+
+@media only screen and (max-width: 1100px){
+  .sidenav {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1024px), screen and (max-height: 750px){
+  #slide-curtain {
+    padding-top: 55px;
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .list-left ul li {
+    font-size: 24px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul.navbar-menu {
+    display: none;
+  }
+
+  nav button {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .sidenav {
+    width: 100%;
+  }
+}
+
+@media  screen and (max-width: 767px), screen and (max-height: 750px) {
+  .list-left ul li{
+    font-size: 22px;
+    line-height: 44px;
+  }
+}
+
+
+
+
+
