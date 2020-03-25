@@ -714,7 +714,11 @@ body {
   }
 }
 
-
+@media only screen and (max-width: 1260px){
+  .locator-container h2 {
+    font-size: 2.25em;
+  }
+}
 
 @media only screen and (max-width: 1199px){
   .img-text h3{
