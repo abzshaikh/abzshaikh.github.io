@@ -824,7 +824,7 @@ body {
     font-size: 35px;
   }
   .img-row-one:nth-child(2) .img-shade-container img{
-    height: 255px !important;
+    height: auto !important;
   }
   #accessories-img{
     height: 225px !important;
