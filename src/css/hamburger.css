@@ -259,6 +259,7 @@ nav .sidenav-trigger{
   line-height: 19px;
   margin-bottom: 0px;
   font-family: FuturaPT-Book;
+  margin-top: 0;
 }
 
 .list-left ul li{
@@ -383,6 +384,45 @@ nav .sidenav-trigger{
     line-height: 44px;
   }
 }
+
+@media  screen and (max-width: 640px) {
+  .list-title-dash{
+    display: none;
+  }
+  #list-container-left ul, #list-container-right ul{
+    padding-left: 0;
+  }
+  #slide-curtain-container ul li div{
+    display: none !important;
+  }
+}
+
+@media  screen and (max-width: 480px) {
+  #slide-curtain{
+    overflow: auto;
+  }
+  #slide-curtain-container{
+    flex-direction: column;
+  }
+  #list-container-left-bottom{
+    margin-top: -20px;
+  }
+  #list-container-right{
+    padding-top: 20px;
+  }
+  .list-left ul li {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+
+@media  screen and (max-width: 440px) {
+  #list-container-left{
+    width: 100%;
+  }
+}
+
+
 
 
 

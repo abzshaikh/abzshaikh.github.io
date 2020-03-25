@@ -6,17 +6,76 @@
     width: 100%;
 }
 
+@media only screen and (max-width: 1100px){
+  #myslider{
+    top: 8%;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
     #myslider {
-        height: 70%;
+        height: 80%;
+        top: 4%;
+      }
+      #myslider img{
+        width: 110%;
+      }
+      .banner-container .col-2{
+        justify-content: flex-start;
       }
 }
 
 @media only screen and (max-width: 767px){
     #myslider{
-        top: 20%;
+        top: 10%;
+        height: 87%;
       }
       #myslider img{
-        width: 109%;
+        width: 110%;
+        height: 110%;
       }
+}
+
+@media only screen and (max-width: 660px){
+  #myslider{
+      height: 80%;
+    }
+
+}
+@media only screen and (max-width: 580px){
+  #myslider{
+      height: 65%;
+    }
+
+}
+
+@media only screen and (max-width: 580px){
+  #myslider{
+      height: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 420px){
+  #myslider {
+    height: 50%;
+    top: 20%;
+}
+
+}
+
+@media only screen and (max-width: 380px){
+  #myslider {
+    height: 45%;
+    top: 24%;
+}
+
+}
+
+@media only screen and (max-width: 340px){
+  #myslider {
+    height: 40%;
+    top: 24%;
+}
+
 }

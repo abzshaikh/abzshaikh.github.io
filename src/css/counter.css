@@ -30,3 +30,9 @@
         margin-bottom: 40px;
       }
   }
+  @media screen and (max-width: 1199px), screen and (max-height: 700px){
+    .banner-text-right {
+      font-size: 30px;
+      line-height: 26px;
+    }
+  }

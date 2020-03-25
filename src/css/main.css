@@ -175,6 +175,7 @@ body {
   .concept-block-row{
     padding-top: 160px;
     width: 100%;
+    position: relative;
   }
 
   .concept-block{
@@ -380,6 +381,39 @@ body {
   text-transform: uppercase;
   width: 200%;
   font-size: 120px;
+}
+
+.email-box::placeholder {
+  color: #8f8f91;
+  opacity: 1;
+}
+.email-box:-ms-input-placeholder { 
+ color: #8f8f91;
+}
+.email-box::-ms-input-placeholder { 
+ color: #8f8f91;
+}
+
+.mob-text-concept{
+  position: absolute;
+  top: 36%;
+  display: none;
+}
+.concept-mob-row .mob-text-concept{
+  right: 2%;
+}
+
+.concept-mob-row2 .mob-text-concept{
+  left: 2%;
+}
+.mob-text-concept h2{
+    font-size: 1.7em;
+    line-height: 1;
+    margin-bottom: 0.7142857143em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: "DomaineDisplayTestRegular";
+    color: white;
 }
 
   .scale-in-hor-left {
@@ -645,11 +679,42 @@ body {
   }
 }
 
+@media only screen and (max-width: 1550px){
+  .moving-text {
+    font-size: 120px;
+  }
+}
+
+
+@media only screen and (max-width: 1400px){
+  .moving-text {
+    font-size: 100px;
+  }
+  .concept-head {
+    left: -4em;
+  }
+  .concept-text{
+    padding-top: 3em;
+    padding-left: 10%;
+  }
+  .concept-mob-row2 .concept-head{
+    right: -95px !important;
+    position: absolute;
+    height: 83px;
+  }
+  .concept-mob-row2 .concept-text{
+    margin-top: 4em;
+  }
+}
+
+
 @media only screen and (max-width: 1366px){
   .concept-head h2, .concept-head-text h2 {
     font-size: 2.8571428571em;
   }
 }
+
+
 
 @media only screen and (max-width: 1199px){
   .img-text h3{
@@ -661,8 +726,43 @@ body {
   .concept-text {
     padding-top: 2em;
     padding-left: 10% !important;
-    padding-right: 10% !important;
+    padding-right: 20% !important;
   }
+  .concept-text p{
+    font-size: 14px;
+  }
+
+  .concept-mob-row2 .concept-head{
+    right: -61% !important;
+    position: absolute;
+    height: 83px;
+    width: 420px;
+  }
+
+  .concept-text-list-container{
+    flex-direction: column;
+    margin-left: 17px;
+  }
+
+  .concept-text-list-container li{
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .concept-text-list-container li:nth-child(2), .concept-text-list-container li:nth-child(4){
+    margin-left: 48px;
+  }
+
+  .concept-text-number{
+    width: 14%;
+    margin: 0px 6px 0px 0px;
+  }
+
+  .concept-mob-row2 .concept-text{
+    width: 142%;
+  }
+
   .store-header h2, .locator-container h2{
     font-size: 2.6142857143em;
     letter-spacing: 15px;
@@ -698,8 +798,12 @@ body {
 
 
 @media only screen and (max-width: 1024px) {
-  #header, .banner-container {
-    padding: 0 40px !important;
+  #header{
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  .banner-container {
+    padding: 15px 40px !important;
   }
   .banner-container .col-6{
     display: flex;
@@ -708,6 +812,10 @@ body {
   .mod {
     right: 40px !important;
   }
+
+  .img-row-two:nth-child(1) .img-text{
+    top: 17% !important;
+  }
   .img-text h3{
     font-size: 35px;
   }
@@ -715,7 +823,7 @@ body {
     height: 255px !important;
   }
   #accessories-img{
-    height: 255px !important;
+    height: 225px !important;
   }
   .concept-block{
     height: 550px;
@@ -729,22 +837,30 @@ body {
   .concept-text p{
     font-size: 13px;
   }
+  .concept-mob-detail{
+    width: 43% !important;
+  }
 
 }
 
 @media only screen and (max-width: 991px){
+  #header{
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
   .img-text h3{
     font-size: 30px;
   }
   .concept-block-row{
     padding-top: 60px;
   }
+
   .store-header h2, .locator-container h2{
     font-size: 1.8142857143em;
     letter-spacing: 5px;
   }
   .store-header{
-    top: 55px;
+    top: 80px;
   }
   .store-row{
     padding-top: 120px !important;
@@ -753,6 +869,12 @@ body {
   .footer-container{
     width: 100% !important;
     padding-top: 50px !important;
+  }
+  .concept-text-list-container li:nth-child(2), .concept-text-list-container li:nth-child(4){
+    margin-left: 0px;
+  }
+  .concept-mob-row2 .concept-head{
+    right: -37% !important;
   }
 }
 
@@ -765,19 +887,33 @@ body {
 }
 
 @media only screen and (max-width: 767px){
+
   .banner-text-right-container, .banner-container .col-2 {
     display: none !important;
     bottom: 0;
     width: 100%;
   }
-  .home-banner__image-list {
-    width: 85%;
-    right: 0%;
-    top: 16%;
+  .banner-text-left-container{
+    top: 44%;
   }
+
+  .banner-text-left{
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .banner-container .col-4{
+    flex: 0 0 23.333333%;
+    max-width: 23.333333%;
+  }
+
   .banner-container .col-6{
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%;
+    flex: 0 0 76.666667%;
+    max-width: 76.666667%;
+  }
+
+  .img-block-container .dash-reduce-container{
+    display: none;
   }
 
   .menu-text{
@@ -786,19 +922,53 @@ body {
   .img-block-container .imgblock{
     flex: 0 0 100%;
     max-width: 100%;
+    margin-bottom: 50px;
   }
+
+  .img-text h3 {
+    letter-spacing: 0px !important;
+}
   .concept-block{
     height: 450px;
   }
   .concept-head h2, .concept-head-text h2 {
-    font-size: 1.1714285714em;
+    font-size: 1.7em;
+    letter-spacing: 0;
   }
+
+  .concept-head {
+    left: -1em;
+  }
+
+  .concept-text p {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.concept-text {
+  padding-top: 2em;
+  padding-left: 15% !important;
+  padding-right: 15% !important;
+}
+
+.concept-mob-row2 .concept-head {
+  right: -11% !important;
+}
+
+.concept-mob-row2 .concept-text{
+  padding-left: 1% !important;
+  padding-right: 15% !important;
+}
+
+.concept-text-list-container li{
+  width: 80%;
+}
   .dash-reduce-container{
     font-size: 12px;
     letter-spacing: 1.25px;
   }
   .concept-head-text-container{
-    top: 5%;
+    top: 10%;
   }
   .not-line-text{
     padding-left: 105px;
@@ -812,25 +982,68 @@ body {
   .online-store-two img{
     width: 100% !important;
   }
-  .news-header{
-    font-size: 1.3428571429em;
-    letter-spacing: 2px;
+  .online-store-two{
+    top: 55px !important;
   }
-
+  .store-header {
+    top: -67px;
+}
+  .store-header h2{
+    font-size: 1.542857143em;
+}
+  .footer-list-container ul li{
+    line-height: 27px;
+  }
+  .footer-row {
+    height: 629px !important;
+  }
 }
 
 @media only screen and (max-width: 660px){
+  #header {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+.banner-container .col-4 {
+  flex: 0 0 20.333333%;
+  max-width: 20.333333%;
+}
+.banner-container .col-6 {
+  flex: 0 0 79.666667%;
+  max-width: 79.666667%;
+  padding: 0px;
+}
+.img-block-container .dash-reduce-container{
+  display: none;
+}
+
+  .banner-container {
+    padding: 15px 30px !important;
+}
   .concept-block{
     height: 435px;
   }
   .concept-head{
     display: none;
   }
+  .concept-text-list-container li{
+    width: 100%;
+  }
   .concept-mob-row{
     flex-direction: column;
   }
   .concept-mob-row2{
     flex-direction: column-reverse;
+  }
+  .concept-mob-row2 .concept-row-two{
+    position: relative;
+    left: 30%;
+  }
+  .concept-mob-row2 .concept-text{
+    margin-top: 0;
+  }
+  .concept-mob-row2 .dash-reduce-container{
+    padding-left: 75px;
   }
   .concept-mob-detail{
     width: 100% !important;
@@ -841,16 +1054,38 @@ body {
   }
   .concept-text{
     padding-top: 1em;
+    padding-left: 9% !important;
+    padding-right: 9% !important;
   }
+ 
+  .concept-row-three{
+    margin-top: 7em;
+  }
+  .concept-row-three .concept-block{
+    height: 300px;
+  }
+  .concept-head-text h2 {
+    font-size: 1.48em;
+}
   .concept-brand{
     width: 100% !important;
   }
+  .mob-text-concept{
+    display: block;
+  }
+  .store-header h2 {
+    letter-spacing: 2px;
+}
   .dash-reduce-container{
     margin-top: 15px !important;
   }
   .img-block-container{
     margin-top: 40px !important;
   }
+  .concept-block {
+    height: 435px;
+    width: 462px;
+}
   .news-container-row{
     margin-bottom: 90px !important;
   }
@@ -861,9 +1096,123 @@ body {
     font-size: 30px;
     letter-spacing: 4px;
   }
+  .img-block-container .dash-reduce-container{
+    display: none;
+  }
+  .concept-text{
+    padding-left: 9% !important;
+    padding-right: 9% !important;
+  }
+  .online-store-two {
+    top: 95px !important;
+}
+.store-row {
+  padding-top: 120px !important;
+  padding-bottom: 160px !important;
+}
+
   .footer-container{
     padding-left: 30px !important;
     padding-right: 30px !important;
   }
 }
+
+@media only screen and (max-width: 580px){
+  .img-row-two .img-text{
+    top: 37% !important;
+  }
+  .img-row-one .img-text{
+    top: 40% !important;
+  }
+  .concept-block {
+    width: 70%;
+}
+.concept-block-row .dash-reduce-container {
+  letter-spacing: 3.25px;
+}
+.mob-text-concept h2{
+  font-size: 1.48em;
+}
+.not-line-text {
+  padding-left: 122px;
+}
+.concept-row-three .dash-reduce-container{
+  left: 22% !important;
+}
+.online-store-img img, .online-store-img .shade{
+  top: 0 !important;
+}
+.online-store-two {
+  top: 40px !important;
+}
+.store-row{
+  padding-bottom: 120px !important;
+}
+.footer-container{
+  flex-direction: column;
+}
+.footer-left{
+  margin-bottom: 15px;
+}
+.footer-right{
+  width: 100% !important;
+}
+.footer-row{
+  height: 729px !important;
+}
+}
+
+@media only screen and (max-width: 480px){
+  .banner-text-left-container{
+    top: 41%;
+  }
+  .concept-block{
+    width: 80%;
+  }
+  .concept-mob-row2 .concept-row-two{
+    left: 20%;
+  }
+  .locator-container h2 {
+    font-size: 1.6em;
+    letter-spacing: 2px;
+}
+.online-store-img:nth-child(3) img, .online-store-img:nth-child(3) .shade {
+  top: -25px !important;
+}
+.online-store-img .dash-reduce-container{
+ top: 38% !important;
+}
+.online-store-two {
+  top: 25px !important;
+}
+}
+
+@media only screen and (max-width: 460px){
+  .footer-row {
+    height: 784px !important;
+}
+.footer-container {
+  flex-direction: column;
+}
+.footer-list-container{
+  width: 49.333% !important;
+}
+.footer-top{
+  height: 50% !important;
+  flex-wrap: wrap;
+}
+.third-ul-footer{
+  position: relative;
+    top: -28%;
+    left: 50%;
+}
+}
+
+@media only screen and (max-width: 380px){
+  .concept-row-three .dash-reduce-container{
+    left: 12% !important;
+  }
+}
+
+
 
