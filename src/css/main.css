@@ -753,6 +753,9 @@ body {
     align-items: center;
     margin-bottom: 10px;
   }
+  .dash-reduce-container{
+    letter-spacing: 2.25px;
+  }
 
   .concept-text-list-container li:nth-child(2), .concept-text-list-container li:nth-child(4){
     margin-left: 48px;
