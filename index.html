@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="src/css/counter.css">
     <link rel="stylesheet" href="src/css/newsCarousel.css">
 </head>
-<body style="background:#1A1A1C">
+<body style="background:#1A1A1C;overflow: hidden;">
     <nav>
         <div id="header" class="container-fluid">
             <div class="row">
@@ -272,7 +272,7 @@
                     <div class="concept-head">
                         <div class="concept-head-text">
                             <h2>
-                                <span>r</span>
+                                <span style="margin-right: 15px;">r</span>
                                 <span>c</span>
                                 <span>o</span>
                                 <span>n</span>
@@ -293,6 +293,7 @@
                     </div>
                 </div>
             </div>
+            <div class="mob-text-concept"><h2>r concepts</h2></div>
         </div>
         <div class="moving-text-container">
             <h1 class="moving-text">R concepts</h1>
@@ -306,7 +307,7 @@
                     <div class="concept-head" style="left: auto;text-align: right;right: -40px;z-index: 2;">
                         <div class="concept-head-text">
                             <h2>
-                                <span>r</span>
+                                <span style="margin-right: 15px;">r</span>
                                 <span>c</span>
                                 <span>o</span>
                                 <span>n</span>
@@ -334,6 +335,7 @@
                 </div>
             </div>
             <div class="concept-block concept-row-two" style="background-image: url(src/images/inside2.jpg)"></div>
+            <div class="mob-text-concept"><h2>R concierge</h2></div>
         </div>
         <div class="moving-text-container-left" style="left: 3%;">
             <h1 class="moving-text">R Concierge</h1>
@@ -648,11 +650,11 @@
 
     <div class="row footer-row" style="height: 985px;">
         <div class="footer-container" style="background-color: #202023;width: 80vw;padding: 190px 80px 0 80px;display: flex;">
-            <div style="width: 25%;height: 100%;">
+            <div class="footer-left" style="width: 25%;height: 100%;">
                 <img src="src/images/logo.svg" alt="" style="max-width: 58px;">
             </div>
-            <div style="width: 75%;height: 100%;">
-                <div style="width: 100%;height: 58%;display: flex;color: white;">
+            <div class="footer-right" style="width: 75%;height: 100%;">
+                <div class="footer-top" style="width: 100%;height: 58%;display: flex;color: white;">
                     <div class="footer-list-container" style="width: 33.33%;">
                         <h6>Rivoli</h6>
                         <ul>
@@ -678,7 +680,7 @@
                             <li>Contact Us</li>
                         </ul>
                     </div>
-                    <div class="footer-list-container" style="width: 33.33%;">
+                    <div class="footer-list-container third-ul-footer" style="width: 33.33%;">
                         <h6>Social</h6>
                         <ul>
                             <li>Facebook</li>
@@ -691,11 +693,11 @@
                 <div style="width: 100%;height: 42%;color: white;margin-top: 50px;">
                     <h6>Sign Up for Newsletter</h6>
                     <form action="">
-                        <input type="text" placeholder="Email Address" style="color: white;">
+                        <input class="email-box" type="text" placeholder="Email Address" style="color: white;">
                     </form>
                     <div style="padding: 55px 0px;display: flex;justify-content: space-between;">
                         <p class="footer-policy">© 2020 Rivoli Group. All Rights Reserved.</p>
-                        <p class="footer-policy">Privacy Policy</p>
+                        <p class="footer-policy" style="text-decoration: underline;">Privacy Policy</p>
                     </div>
                 </div>
             </div>
