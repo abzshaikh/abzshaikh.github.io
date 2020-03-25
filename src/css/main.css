@@ -1216,6 +1216,8 @@ body {
   .concept-row-three .dash-reduce-container{
     left: 12% !important;
   }
+.img-row-one:nth-child(2) .img-shade-container img{
+    height: auto !important;
 }
 
 
