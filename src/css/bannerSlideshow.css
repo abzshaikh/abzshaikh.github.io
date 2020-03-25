@@ -28,7 +28,7 @@
 @media only screen and (max-width: 767px){
     #myslider{
         top: 10%;
-        height: 87%;
+        height: 75%;
       }
       #myslider img{
         width: 110%;
@@ -38,13 +38,13 @@
 
 @media only screen and (max-width: 660px){
   #myslider{
-      height: 80%;
+      height: 75%;
     }
 
 }
 @media only screen and (max-width: 580px){
   #myslider{
-      height: 65%;
+      height: 53%;
     }
 
 }
@@ -58,7 +58,7 @@
 
 @media only screen and (max-width: 420px){
   #myslider {
-    height: 50%;
+    height: 44%;
     top: 20%;
 }
 
@@ -66,7 +66,7 @@
 
 @media only screen and (max-width: 380px){
   #myslider {
-    height: 45%;
+    height: 40%;
     top: 24%;
 }
 
@@ -74,7 +74,7 @@
 
 @media only screen and (max-width: 340px){
   #myslider {
-    height: 40%;
+    height: 35%;
     top: 24%;
 }
 
