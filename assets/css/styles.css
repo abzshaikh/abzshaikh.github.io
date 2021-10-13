@@ -865,6 +865,11 @@ img {
   resize: none;
 }
 
+.contact__form button {
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
 /*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;
