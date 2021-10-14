@@ -726,18 +726,18 @@
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input" name="name">
+                                <input type="text" class="contact__input" name="name" required>
                             </div>
 
                             <div class="contact__content">
                                 <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input" name="email">
+                                <input type="email" class="contact__input" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="please enter valid email [something@something.com]." required>
                             </div>
                         </div>
 
                         <div class="contact__content">
                             <label for="" class="contact__label">Project</label>
-                            <input type="text" class="contact__input" name="project">
+                            <input type="text" class="contact__input" name="project" required>
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact__label">Message</label>
